@@ -4,12 +4,12 @@ const JobSchma = mongoose.Schema(
   {
     company: {
       type: String,
-      require: [true, 'Please provide a company name'],
+      required: [true, 'Please provide a company name'],
       maxlength: 30,
     },
     position: {
       type: String,
-      require: [true, 'Please provide position'],
+      required: [true, 'Please provide position'],
       maxlength: 100,
     },
     status: {
@@ -20,7 +20,7 @@ const JobSchma = mongoose.Schema(
     createdBy: {
       type: mongoose.Types.ObjectId,
       ref: 'User',
-      require: [true, 'Please provide a user'],
+      required: [true, 'Please provide a user'],
     },
   },
   { timestamps: true }
